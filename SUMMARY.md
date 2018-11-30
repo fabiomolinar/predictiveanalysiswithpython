@@ -221,3 +221,39 @@ Types of models:
 Learning model = Model + Algorithm
 Model = general formulation of the relationship between features and target
 Learning algorithm = procedure to find the specific form of the Model
+
+## Regression
+
+### Scikit steps
+
+0. Data preparation
+1. Import the estimator object (model)
+2. Create an instance of the estimator
+3. Train the estimator (`fit()` method)
+4. Evaluate the model
+5. Make predictions
+
+### Multiple regression model
+
+- Uses a combination of linear regressions to estimate our targets based on our features.
+- Not very flexible.
+- Data cleaning and preparation is quite important as outliers can affect the results significantly.
+
+### K-nearest neighbors model
+
+The main idea is that features that are close to each other will have targets that are closed to each other.
+
+### Lasso
+
+Automatically removes features that are irrelevant to the model. Besides variable selection, it also makes regularization.
+
+Good for models with many features.
+
+### Model evaluation
+
+- Metrics: 
+    - mean squared error, 
+    - root mean squared error, 
+    - mean absolute error, 
+    - explained variance score, 
+    - r-squared 
