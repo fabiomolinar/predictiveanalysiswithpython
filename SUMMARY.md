@@ -137,3 +137,43 @@ clf.fit(feataures_train, target_train)
 
 Important classes:
 - *GridSearchCV*: Exhaustive search over specified parameter values for an estimator.
+
+## Text analysis - sentiment
+
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+```
+
+### Steps
+
+1. Save text files into a list.
+2. Convert list of text files into an array of words that appear on these files.
+3. Each line on this array correspond to an entry on the text files list and their respective columns are tagged as '1' if they contain the word.
+4. This new array (which represent the features) can be merged with a sentiment column (target) to run machine learning algorithms on it.
+
+### Example:
+Let's imagine that our list of text is as follows:
+
+- This is not cool (sentiment negative)
+- I am nice (sentiment positive)
+- Hello world (sentiment neutral)
+- I am the world (sentiment positive)
+
+This is then converted into an array. The columns are made of the words that appeared on the text above and the lines represent each one of the texts above.
+
+||This|is|not|cool|I|am|nice|Hello|world|the|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|1|1|1|1|1|0|0|0|0|0|0|
+|2|0|0|0|0|1|1|1|0|0|0|
+|3|0|0|0|0|0|0|0|1|1|0|
+|4|0|0|0|0|1|1|0|0|1|1|
+
+If we have our target already defined based on each one of the texts, we can merge that with the array above to create the dataset to feed our machine learning algorithms. Let's say that if the sentiment is negative we assign 0 to it, 1 if positive and 2 if neutral. Our dataset will then look like this:
+
+||This|is|not|cool|I|am|nice|Hello|world|the|SENTIMENT|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|1|1|1|1|1|0|0|0|0|0|0|0|
+|2|0|0|0|0|1|1|1|0|0|0|1|
+|3|0|0|0|0|0|0|0|1|1|0|2|
+|4|0|0|0|0|1|1|0|0|1|1|1|
+
