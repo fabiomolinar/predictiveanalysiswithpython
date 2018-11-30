@@ -2,6 +2,7 @@
 
 Sources:
 - [Stefan Kojouharov](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463)
+- [Shubhi Asthana](https://medium.freecodecamp.org/you-need-these-cheat-sheets-if-youre-tackling-machine-learning-algorithms-45da5743888e)
 
 ## Neural Networks
 
@@ -21,7 +22,12 @@ Machine learning overview
 
 Choosing algorithms
 
-![Choosing algorithms](https://cdn-images-1.medium.com/max/1600/1*xCS2eayL2pZBhpQZhMXaIA.png)
+![Choosing algorithms 1](https://cdn-images-1.medium.com/max/1600/1*xCS2eayL2pZBhpQZhMXaIA.png)
+![Choosing algorithms 2](https://i.pinimg.com/originals/d4/e5/52/d4e552cd83a99fd86c43c45e5cba5d6c.png)
+
+SAS Algorithm Flowchart
+
+![SAS Algorithm Flowchart](https://cdn-images-1.medium.com/max/1600/1*Gbfq8wTIyHBnC5oDhzNACw.png)
 
 ## Scikit-learn
 
@@ -32,38 +38,3 @@ Finding estimators
 Code examples
 
 ![Code examples](https://cdn-images-1.medium.com/max/2000/1*k6_-XfgogqSqjgMJP6_8Iw.png)
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
