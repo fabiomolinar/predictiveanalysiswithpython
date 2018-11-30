@@ -177,3 +177,47 @@ If we have our target already defined based on each one of the texts, we can mer
 |3|0|0|0|0|0|0|0|1|1|0|2|
 |4|0|0|0|0|1|1|0|0|1|1|1|
 
+## Supervised vs Unsupervised vs Reinforcement Learning
+
+- Supervised:
+    - Samples used to train the model need to contain data on features and targets.
+    - Good for prediction
+    - Main types:
+        - Classification: predicting categories
+        - Regretion: predicting numerical values
+    - Conditions:
+        - Need existing data on features and targets
+        - There must be enough data (in quality and quantity)
+- Unsupervised: 
+    - Samples used to train the model contain data only on the features. 
+    - Objective is to try to find some kind of structure on the data.
+    - Good to find patterns, segments on the data being analyzed.
+- Reinforcement:
+    - Dynamic
+    - Program is provided feedback in terms of rewards and punishments as it navigates the problem space.
+    - Uses:
+        - Manufacturing robots
+        - Self-driving cars
+        - Automatic trading
+
+## Classification vs Regretion
+
+- Classification: predicting categories
+- Regretion: predicting numerical values
+
+Types of models:
+
+| Regression | Classification |
+| - | - |
+|Linear regression|Logistic regression|
+|K-Nearest neighbor regressor|K-Nearest neighbor classifier|
+|Lasso and Ridge regression|Classification trees|
+|Random forest|Random forest classifier|
+|Artificial neural networks|Artificial neural networks|
+|Others...|Others...|
+
+## Models vs Algorithms
+
+Learning model = Model + Algorithm
+Model = general formulation of the relationship between features and target
+Learning algorithm = procedure to find the specific form of the Model
