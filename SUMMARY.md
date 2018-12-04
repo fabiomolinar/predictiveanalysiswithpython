@@ -1,3 +1,5 @@
+# Summary of course on predictive learning with python
+
 ## Getting your data ready for machine learning
 
 Steps to get the data ready:
@@ -76,6 +78,7 @@ clf.score(features_test, labels_test)
 ```
 
 Important functions:
+
 - *model.predict()*: used to make predictions based on our model
 - *metrics.accuracy_score()*: used to score our predictions
 - *train_test_split()*: used to split the dataset into two datasets, one for training and another for testing
@@ -108,6 +111,7 @@ sorted(zip(map(lambda x: round(x, 4), rfe.ranking_), names))
 ```
 
 Important functions/classes
+
 - *RFE*: Given an external estimator that assigns weights to features (e.g., the coefficients of a linear model), the goal of recursive feature elimination (RFE) is to select features by recursively considering smaller and smaller sets of features. First, the estimator is trained on the initial set of features and the importance of each feature is obtained either through a coef_ attribute or through a feature_importances_ attribute. Then, the least important features are pruned from current set of features. That procedure is recursively repeated on the pruned set until the desired number of features to select is eventually reached.
 - *RFE.fit()*: fits the data to a model
 - *RFE.ranking_*: **ranks the most important features**
@@ -136,6 +140,7 @@ clf.fit(feataures_train, target_train)
 ```
 
 Important classes:
+
 - *GridSearchCV*: Exhaustive search over specified parameter values for an estimator.
 
 ## Text analysis - sentiment
@@ -151,7 +156,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 3. Each line on this array correspond to an entry on the text files list and their respective columns are tagged as '1' if they contain the word.
 4. This new array (which represent the features) can be merged with a sentiment column (target) to run machine learning algorithms on it.
 
-### Example:
+### Example
+
 Let's imagine that our list of text is as follows:
 
 - This is not cool (sentiment negative)
@@ -180,25 +186,25 @@ If we have our target already defined based on each one of the texts, we can mer
 ## Supervised vs Unsupervised vs Reinforcement Learning
 
 - Supervised:
-    - Samples used to train the model need to contain data on features and targets.
-    - Good for prediction
-    - Main types:
-        - Classification: predicting categories
-        - Regretion: predicting numerical values
-    - Conditions:
-        - Need existing data on features and targets
-        - There must be enough data (in quality and quantity)
-- Unsupervised: 
-    - Samples used to train the model contain data only on the features. 
-    - Objective is to try to find some kind of structure on the data.
-    - Good to find patterns, segments on the data being analyzed.
+  - Samples used to train the model need to contain data on features and targets.
+  - Good for prediction
+  - Main types:
+    - Classification: predicting categories
+    - Regretion: predicting numerical values
+  - Conditions:
+    - Need existing data on features and targets
+    - There must be enough data (in quality and quantity)
+- Unsupervised:
+  - Samples used to train the model contain data only on the features.
+  - Objective is to try to find some kind of structure on the data.
+  - Good to find patterns, segments on the data being analyzed.
 - Reinforcement:
-    - Dynamic
-    - Program is provided feedback in terms of rewards and punishments as it navigates the problem space.
-    - Uses:
-        - Manufacturing robots
-        - Self-driving cars
-        - Automatic trading
+  - Dynamic
+  - Program is provided feedback in terms of rewards and punishments as it navigates the problem space.
+  - Uses:
+    - Manufacturing robots
+    - Self-driving cars
+    - Automatic trading
 
 ## Classification vs Regretion
 
@@ -226,12 +232,13 @@ Learning algorithm = procedure to find the specific form of the Model
 
 ### Scikit steps
 
-0. Data preparation
-1. Import the estimator object (model)
-2. Create an instance of the estimator
-3. Train the estimator (`fit()` method)
-4. Evaluate the model
-5. Make predictions
+1. Data preparation
+2. Including scaling if necessary (could use the `RobustScaler()` class)
+3. Import the estimator object (model)
+4. Create an instance of the estimator
+5. Train the estimator (`fit()` method)
+6. Evaluate the model
+7. Make predictions
 
 ### Multiple regression model
 
@@ -251,9 +258,28 @@ Good for models with many features.
 
 ### Model evaluation
 
-- Metrics: 
-    - mean squared error, 
-    - root mean squared error, 
-    - mean absolute error, 
-    - explained variance score, 
-    - r-squared 
+- Metrics:
+  - mean squared error,
+  - root mean squared error,
+  - mean absolute error,
+  - explained variance score,
+  - r-squared
+
+### Strategies to increase chances of building a good model
+
+1. Collect enough data
+2. Collect good data (quality)
+3. Feature engineering
+4. Pre-processing (outliner, missing data, scaling features)
+5. Feature selection methods
+6. Regularization
+7. Parameter tuning
+8. Use more complex models
+
+## Classification
+
+Some types:
+
+- Logistic regression
+- Classification trees
+- Naive Bayes
