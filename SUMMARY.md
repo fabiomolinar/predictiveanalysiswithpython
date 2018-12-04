@@ -278,8 +278,14 @@ Good for models with many features.
 
 ## Classification
 
-Some types:
+Some types of model:
 
 - Logistic regression
 - Classification trees
 - Naive Bayes
+
+Some types of classification:
+
+- Binary
+- Multi-class
+- Multi-label
